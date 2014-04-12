@@ -51,8 +51,9 @@ app.use(mount(route));
 app.use(logger());
 
 app.use(jsonp());
+app.port = 80;
 
-if (!module.parent) {
-    app.listen(80);
+//if (!module.parent) {
+//    app.listen(80);
     console.log(" is up and running");
-}
+//}
