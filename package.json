@@ -1,0 +1,32 @@
+{
+  "name": "Hopq",
+  "description": "Make Government queues",
+  "version": "0.0.1",
+  "dependencies": {
+    "koa": "~0.5.2",
+    "koa-mount": "~1.2.5",
+    "co-views": "~0.2.0",
+    "ejs": "~1.0.0",
+    "koa-logger": "~1.2.0",
+    "koa-router": "~3.1.2",
+    "koa-session": "~2.0.0",
+    "koa-jsonp": "*",
+    "co-body": "*",
+    "koa-static": "*",
+    "koa-formidable": "*",
+    "should": "*",
+    "supertest": "*",
+    "co": "*",
+    "nodemailer": "*",
+    "qr-image": "*"
+  },
+  "devDependencies": {
+    "co": "*",
+    "should": "*",
+    "supertest": "*"
+  },
+  "engines": {
+    "node": ">= 11.3"
+  },
+  "license": "MIT"
+}

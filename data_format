@@ -1,0 +1,11 @@
+{
+	Code_of_station1: {
+		code_of_destiantion1 : cost ,
+		code_of_destiantion2 : cost
+	},
+	Code_of_station2: {
+		code_of_destiantion1 : cost ,
+		code_of_destiantion2 : cost
+	}
+}
+{}
