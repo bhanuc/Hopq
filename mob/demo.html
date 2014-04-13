@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./js/chui-ios-3.5.3.css">
   <script src="./js/jq_2.0.3.js"></script>
   <script src="./js/chui-3.5.3.js"></script>
-  <script src="./js/custom_func.js"></script>
   <style>
     .icon {
       height: 40px;
@@ -389,63 +388,55 @@
 </head>
 <body>
   <nav>
-    <h1>HOP-Q</h1>
+    <h1>Demo</h1>
   </nav>
   <article id="main" class="current">
     <section>
       <ul class='list'>
-        <li data-goto="delhi-metro" class='nav'>
-          <h3>Delhi Metro</h3>
+        <li data-goto="segmented-article" class='nav'>
+          <h3>Segmented Control</h3>
         </li>
-        <li data-goto="" class='nav disabled'>
-          <h3>Service 2</h3>
+        <li data-goto="select-article" class='nav'>
+          <h3>Select List</h3>
         </li>
-        <li data-goto="" class='nav'>
-          <h3>Service 3</h3>
+        <li data-goto="deletable-article" class='nav'>
+          <h3>Deletable List</h3>
         </li>
-        <li data-goto="" class='nav'>
-          <h3>Service 4</h3>
+        <li data-goto="popup-article" class='nav'>
+          <h3>Popup</h3>
+        </li>
+        <li data-goto="popover-article" class='nav'>
+          <h3>Popover</h3>
+        </li>
+        <li data-goto="sheet-article" class='nav'>
+          <h3>Sheet</h3>
+        </li>
+        <li data-goto="paging-article" class='nav'>
+          <h3>Paging</h3>
         </li>
       </ul>
-          <footer><a class='button'>Customise</a></footer>
     </section>
   </article>
   <nav>
-    <a class='button back'>Hop-Q</a>
-    <h1>Delhi Metro</h1>
+    <a class='button back'>Demo</a>
+    <h1>Segmented Control</h1>
   </nav>
-  <article id='delhi-metro' class='next'>
+  <article id='segmented-article' class='next'>
     <section>
       <div class='horizontal centered'>
         <div class='segmented'>
-          <a class='button selected'>New Ticket</a>
-          <a class='button'>View Booked Ticket</a>
-          <a class='button'>Credit History</a>
+          <a class='button selected'>Switch</a>
+          <a class='button'>Range</a>
+          <a class='button'>Stepper</a>
         </div>
       </div>
       <div id="toggle-panels">
-        <div id='travel_form'>
-        <form>
-        <div id = "ticket_book">
-          <h2>Enter the details your Travel</h2>
+        <div id='switches'>
+          <h2>Switch</h2>
           <ul class='list'>
             <li class='comp'>
               <div>
-                <b>From : </b> <br><select name="origin" id="origin">
-                    <option value="rajiv_chowk" >Rajiv Chowk</option>
-                    <option value="patel_chowk" >Patel Chowk</option>
-                    <option value="cental_secretariat" >Cental Secretariat</option>
-                    <option value="udyog_bhawan" >Udyog Bhawan</option>
-                    <option value="race_course" >Race Course</option>
-                    <option value="jor_bagh" >Jor Bagh</option>
-                    <option value="ina" >INA</option>
-                    <option value="aiims" >AIIMS</option>
-                    <option value="green_park" >Green Park</option>
-                    <option value="hauz_khas" >Hauz Khas</option>
-                    <option value="malviya_nagar" >Malviya Nagar</option>
-                    <option value="Saket" >Saket</option>
-                    <option value="qutab_minar" >Qutab Minar</option>
-                </select>
+                <h3>Sleep</h3>
               </div>
               <aside>
               </aside>
@@ -454,21 +445,7 @@
           <ul class='list'>
             <li class='comp'>
               <div>
-                <b>To: </b> <br><select name="destin" id = "destin">
-                    <option value="rajiv_chowk" >Rajiv Chowk</option>
-                    <option value="patel_chowk" >Patel Chowk</option>
-                    <option value="cental_secretariat" >Cental Secretariat</option>
-                    <option value="udyog_bhawan" >Udyog Bhawan</option>
-                    <option value="race_course" >Race Course</option>
-                    <option value="jor_bagh" >Jor Bagh</option>
-                    <option value="ina" >INA</option>
-                    <option value="aiims" >AIIMS</option>
-                    <option value="green_park" >Green Park</option>
-                    <option value="hauz_khas" >Hauz Khas</option>
-                    <option value="malviya_nagar" >Malviya Nagar</option>
-                    <option value="Saket" >Saket</option>
-                    <option value="qutab_minar" >Qutab Minar</option>
-                </select>
+                <h3>Vacation</h3>
               </div>
               <aside>
               </aside>
@@ -477,18 +454,14 @@
           <ul class='list'>
             <li class='comp'>
               <div>
-               <a class="button" onclick="c_con_text()">Continue</a>
+                <h3>Breakfast</h3>
               </div>
               <aside>
               </aside>
             </li>
-          </ul></div>
-          <p> <ul class='list'>
-            <li class='comp'>
-          <section id="switch-response"></section>
-          </li></ul>
-          </p>
-          </form>
+          </ul>
+          <p><span>Response: </span><span id="switch-response"></span></p>
+
         </div>
         <div>
           <h2>Range</h2>
