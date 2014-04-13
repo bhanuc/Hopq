@@ -226,7 +226,7 @@ function c_con_text(){
 }	
 
 function create_ticket(){
-	intel.xdk.device.showRemoteSiteExt("http://162.222.183.55/"+"ticket/create?destination="+curr_book.destination+"&origin="+curr_book.origin,280,0,50,50);
+intel.xdk.device.showRemoteSite("http://162.222.183.55/"+"ticket/create?destination="+curr_book.destination+"&origin="+curr_book.origin,280,0,50,50);
 
 }
 
