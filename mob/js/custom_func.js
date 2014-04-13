@@ -243,7 +243,7 @@ function sucess(data){
     $(document).ready(function(){
       $('#confirmation').hide();
       $('#qr_display').hide();
-      intel.xdk.device.hideSplashScreen();
+     // intel.xdk.device.hideSplashScreen();
     });
 function random(){
 
@@ -261,3 +261,10 @@ function random(){
 	 	}
  } );
 }
+
+var onDeviceReady=function(){
+
+//hide splash screen
+intel.xdk.device.hideSplashScreen();	
+
+};
