@@ -11,7 +11,7 @@ var public_dir = require('koa-static');
 var app = module.exports = koa();
 var views = require('co-views');
 var config = require('./config/app');
-var qr = require('qr-image');  
+ 
 //var User = require('./model/user').User;
 
 
@@ -43,13 +43,11 @@ default_router.get('/', function *() {
 });
 
 default_router.get('/ticket/create', function *(){
-    this.set('Access-Control-Allow-Origin', '*');
     var info = this.request.query;
     //check if request is valid
     if (info){
     var token = yield create_token(info);
-    this.type = "svg";
-    this.body = qr.image(JSON.stringify(token), {type: 'svg'});
+    this.body = yield render('qr.ejs',{token : token});
 
 } else {
     this.body = "poor try hacker :p , is this the best you can do";
