@@ -226,11 +226,16 @@ function c_con_text(){
 }	
 
 function create_ticket(){
-	 $.ajax({
+
+    $.ajax({
 	 	type: "GET",
 	 	dataType: "xml",
 	 	url:"http://162.222.183.55/"+"ticket/create?destination="+curr_book.destination+"&origin="+curr_book.origin,
 	 	contentType: "image/svg",
+        beforeSend: function(jqXHR, settings){
+        jqXHR.setRequestHeader('X-requested-With', 'XMLHttpRequest');
+        },
+        crossDoamin: false,
 	 	success: function(data){
 	 		success(data);
 	 	}
@@ -251,4 +256,5 @@ function sucess(data){
     $(document).ready(function(){
       $('#confirmation').hide();
       $('#qr_display').hide();
+      intel.xdk.device.hideSplashScreen();
     });
