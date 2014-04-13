@@ -220,6 +220,35 @@ function c_con_text(){
 	curr_book.cost = data[origin][destination];
 	console.log(destination+ " "+ origin);
 	$('#ticket_book').hide();
-	$('#switch-response').html("You have selected : "+origin+" to "+destination+"<br>Your Fare is "+data[origin][destination]+"<br> Contine or Cancel to go back");	
+	$('#confirmation').show();
+	$('#confirmation').html("<center>You have Entered : "+origin+" to "+destination+"<br><br>Your Fare is "+data[origin][destination]+"<br><button> <a class = 'button' onclick = create_ticket() >Continue </a> </button><br>or<center> <button><a class='button' onclick=cancel_ticket()> Cancel</a></button>");	
 
 }	
+
+function create_ticket(){
+	 $.ajax({
+	 	type: "GET",
+	 	dataType: "xml",
+	 	url:"http://162.222.183.55/"+"ticket/create?destination="+curr_book.destination+"&origin="+curr_book.origin,
+	 	contentType: "image/svg",
+	 	success: function(data){
+	 		success(data);
+	 	}
+ } );
+
+}
+
+function cancel_ticket(){
+	$('#confirmation').html(" ");
+	$('#ticket_book').show();
+	curr_book = {};
+}
+
+function sucess(data){
+	$('#qr_display').show(),
+	 		$('#qr_display').html('<img src="data:image/svg;base64,' + data + '" />'); 
+}
+    $(document).ready(function(){
+      $('#confirmation').hide();
+      $('#qr_display').hide();
+    });

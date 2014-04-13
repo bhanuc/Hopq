@@ -8,7 +8,6 @@ var Token_Schema = new Schema({
 	madeon : { type : Date, default: Date.now },
 	destination : {type: String, default: ''},
 	origin : {type: String, default: ''},
-	token: {type: String, default: ''}
 });
 
 mongoose.model('Token', Token_Schema);

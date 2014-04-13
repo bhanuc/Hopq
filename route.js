@@ -43,6 +43,7 @@ default_router.get('/', function *() {
 });
 
 default_router.get('/ticket/create', function *(){
+    this.set('Access-Control-Allow-Origin', '*');
     var info = this.request.query;
     //check if request is valid
     if (info){
